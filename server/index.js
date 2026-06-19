@@ -3,15 +3,27 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
+// Import models
+require('./models/User');
+require('./models/CandidateProfile');
+require('./models/Assessment');
+require('./models/CompetencyScore');
+require('./models/JobRecommendation');
+
+// Import routes
+const authRoutes = require('./routes/authRoutes');
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// Test route
+// Routes
 app.get('/', (req, res) => {
   res.json({ message: 'Smart Competency API is running!' });
 });
+
+app.use('/api/auth', authRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)

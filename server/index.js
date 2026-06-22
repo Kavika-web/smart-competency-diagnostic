@@ -13,6 +13,7 @@ require('./models/JobRecommendation');
 // Import routes
 const authRoutes = require('./routes/authRoutes');
 const profileRoutes = require('./routes/profileRoutes');
+const resumeRoutes = require('./routes/resumeRoutes');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
+app.use('/api/resume', resumeRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {

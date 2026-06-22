@@ -12,6 +12,7 @@ require('./models/JobRecommendation');
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
 
 const app = express();
 
@@ -24,9 +25,12 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {
+  tlsInsecure: true,
+})
   .then(() => {
     console.log('MongoDB connected');
     app.listen(process.env.PORT || 5000, () => {

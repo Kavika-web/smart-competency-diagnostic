@@ -31,11 +31,14 @@ const Dashboard = () => {
             <p className="text-xs text-gray-400 mt-1">Fill your details</p>
           </Link>
 
-          <div className="bg-white rounded-2xl shadow-sm p-6 text-center opacity-50">
+          <Link
+            to="/assessment"
+            className="bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition text-center"
+          >
             <div className="text-3xl mb-2">📝</div>
             <p className="font-semibold text-gray-700">Take Assessment</p>
-            <p className="text-xs text-gray-400 mt-1">Coming Day 7</p>
-          </div>
+            <p className="text-xs text-gray-400 mt-1">25 questions • 5 domains</p>
+          </Link>
         </div>
 
         <button

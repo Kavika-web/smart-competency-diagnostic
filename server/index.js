@@ -14,6 +14,7 @@ require('./models/JobRecommendation');
 const authRoutes = require('./routes/authRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 const resumeRoutes = require('./routes/resumeRoutes');
+const assessmentRoutes = require('./routes/assessmentRoutes');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/resume', resumeRoutes);
+app.use('/api/assessment', assessmentRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {

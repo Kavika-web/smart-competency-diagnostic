@@ -32,6 +32,12 @@ const competencyScoreSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+
+  profileLabel: {
+  type: String,
+  enum: ['Beginner', 'Developing', 'Competent', 'Proficient', 'Expert'],
+  default: 'Beginner'
+ },
   generatedAt: {
     type: Date,
     default: Date.now

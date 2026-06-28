@@ -16,6 +16,7 @@ const profileRoutes = require('./routes/profileRoutes');
 const resumeRoutes = require('./routes/resumeRoutes');
 const assessmentRoutes = require('./routes/assessmentRoutes');
 const jobRoutes = require('./routes/jobRoutes');
+const skillGapRoutes = require('./routes/skillGapRoutes');
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/resume', resumeRoutes);
 app.use('/api/assessment', assessmentRoutes);
 app.use('/api/jobs', jobRoutes);
+app.use('/api/skillgap',skillGapRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {

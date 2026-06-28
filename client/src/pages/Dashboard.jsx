@@ -78,6 +78,15 @@ const Dashboard = () => {
             <p className="font-semibold text-gray-700">Job Matches</p>
             <p className="text-xs text-gray-400 mt-1">See your top matches</p>
           </Link>
+
+          <Link
+            to="/skillgap"
+            className="bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition text-center"
+          >
+            <div className="text-3xl mb-2">🗺️</div>
+            <p className="font-semibold text-gray-700">Skill Gap</p>
+            <p className="text-xs text-gray-400 mt-1">Learning roadmap</p>
+          </Link>
         </div>
 
         {/* Logout */}

@@ -7,6 +7,7 @@ import Assessment from './pages/Assessment';
 import ProtectedRoute from './components/ProtectedRoute';
 import Results from './pages/Results';
 import Jobs from './pages/Jobs';
+import SkillGap from './pages/SkillGap';
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
         <Route path="/jobs" element={
           <ProtectedRoute allowedRoles={['candidate']}>
             <Jobs />
+          </ProtectedRoute>
+        } />
+        <Route path="/skill-gap" element={
+          <ProtectedRoute allowedRoles={['candidate']}>
+            <SkillGap />
           </ProtectedRoute>
         } />
         <Route path="*" element={<Navigate to="/login" replace />} />

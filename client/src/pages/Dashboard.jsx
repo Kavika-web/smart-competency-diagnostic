@@ -70,11 +70,14 @@ const Dashboard = () => {
             </Link>
           )}
 
-          <div className="bg-white rounded-2xl shadow-sm p-6 text-center opacity-50">
+          <Link
+            to="/jobs"
+            className="bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition text-center"
+          >
             <div className="text-3xl mb-2">💼</div>
             <p className="font-semibold text-gray-700">Job Matches</p>
-            <p className="text-xs text-gray-400 mt-1">Coming soon</p>
-          </div>
+            <p className="text-xs text-gray-400 mt-1">See your top matches</p>
+          </Link>
         </div>
 
         {/* Logout */}

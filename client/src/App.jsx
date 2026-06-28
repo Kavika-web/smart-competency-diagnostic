@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import Assessment from './pages/Assessment';
 import ProtectedRoute from './components/ProtectedRoute';
 import Results from './pages/Results';
+import Jobs from './pages/Jobs';
 
 function App() {
   return (
@@ -35,6 +36,11 @@ function App() {
         <Route path="/results" element={
           <ProtectedRoute allowedRoles={['candidate']}>
             <Results />
+          </ProtectedRoute>
+        } />
+        <Route path="/jobs" element={
+          <ProtectedRoute allowedRoles={['candidate']}>
+            <Jobs />
           </ProtectedRoute>
         } />
         <Route path="*" element={<Navigate to="/login" replace />} />
